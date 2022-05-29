@@ -1,6 +1,12 @@
 ﻿using System.Collections.Generic;
 using System;
 
+static Unit inicialization()
+{
+    Unit unit = new Unit();
+    
+}
+
 class Nest
 {
     public List<Unit> units;
@@ -35,6 +41,10 @@ class HarvesterAnt : Unit
     public void harvest();
 }
 class WarriorAnt : Unit
+{
+    public void attack();
+}
+class Unique : Unit
 {
     public void attack();
 }
