@@ -1,50 +1,13 @@
 ﻿using System.Collections.Generic;
 using System;
+namespace Intership;
 
-static Unit inicialization()
+class Inicialization
 {
-    Unit unit = new Unit();
-    
-}
-
-class Nest
-{
-    public List<Unit> units;
-    public Nest(int countUnits, int totalDefense)
+    static void Main()
     {
-        units = new List<Unit>(countUnits);
+        Ant ant1 = new Ant(15, 3, 4);
+        Console.WriteLine("ant with stats {0}, {1}, {2} created", ant1.health, ant1.damage, ant1.defence);
+        AntQueen.idk_do_somethin();
     }
-
-    public void info()
-    {
-        while() {
-            Unit.info();
-        }
-    }
-}
-
-class Unit
-{
-    public int health;
-    public int damage;
-    public int defense;
-    public string UnitType;
-
-    public static void info()
-    {
-        Console.WriteLine("Здоровье = {health}, Урон = {damage}");
-    }
-}
-
-class HarvesterAnt : Unit
-{
-    public void harvest();
-}
-class WarriorAnt : Unit
-{
-    public void attack();
-}
-class Unique : Unit
-{
-    public void attack();
 }
