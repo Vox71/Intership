@@ -17,10 +17,22 @@ class Program
             else
                 colony1.Harvesters.Add(new AntHarvester(30, 15, "Gigachad"));
         }
+        for (int i = 0; i < warriorsCount; i++)
+        {
+            if(i%2 ==0)
+                colony1.Warriors.Add(new AntWarrior(10, 3, "Abrikos", 1));
+            else
+                colony1.Warriors.Add(new AntWarrior(30, 15, "chiki_briki", 1));
+        }
         for (int i = 0; i < harverstersCount; i++)
         {
             colony1.Harvesters[i].info();
         }
+        for (int i = 0; i < warriorsCount; i++)
+        {
+            colony1.Warriors[i].info();
+        }
+        colony1.Gotogang();
     }
 
 

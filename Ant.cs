@@ -23,5 +23,6 @@ public class Ant
     {
         Random rnd = new Random();
         place = rnd.Next(1, 5);
+        Console.WriteLine($"{antname} отправляется на кучу {place}");
     }
 }

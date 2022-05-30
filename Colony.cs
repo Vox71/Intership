@@ -7,12 +7,12 @@ public class Colony
     public AntQueen Queen;
     public AntSpecific Specific;
     public int stash;
-    public Colony(int HarversterCount, int WarriorsCount, int QHealth, int QDefence, string QAntname, int QDamage, int SHealth, int SDefence, string SAntname)
+    public Colony(int harvesterCount, int warriorsCount, int qHealth, int qDefence, string qAntname, int qDamage, int sHealth, int sDefence, string sAntname)
     {
-        Harvesters = new List<AntHarvester>(HarversterCount);
-        Warriors = new List<AntWarrior>(WarriorsCount);
-        Queen = new AntQueen(QHealth, QDefence, QAntname, QDamage);
-        Specific = new AntSpecific(SHealth, SDefence, SAntname);
+        Harvesters = new List<AntHarvester>(harvesterCount);
+        Warriors = new List<AntWarrior>(warriorsCount);
+        Queen = new AntQueen(qHealth, qDefence, qAntname, qDamage);
+        Specific = new AntSpecific(sHealth, sDefence, sAntname);
     }
 
     public void Info()
@@ -20,6 +20,12 @@ public class Colony
         
     }
 
-
-
+    public void Gotogang()
+    {
+        for (int i = 0; i < Warriors.Count; i++)
+            Warriors[i].gotoheap();
+        for (int i = 0; i < Harvesters.Count; i++)
+            Harvesters[i].gotoheap();
+        Specific.gotoheap();
+    }
 }
