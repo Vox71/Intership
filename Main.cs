@@ -1,11 +1,28 @@
 ﻿namespace Intership;
 
-class Inicialization
+class Program
 {
     static void Main()
     {
-        AntQueen ant1 = new AntQueen(15, 3, 4, "Oleg");
-        Console.WriteLine("ant with stats {0}, {1}, {2}, named {3} created", ant1.health, ant1.damage, ant1.defence, ant1.antname);
-        AntQueen.idk_do_somethin();
+        Init(3, 3);
     }
+
+    static void Init(int harverstersCount, int warriorsCount)
+    {
+        Colony colony1 = new Colony(harverstersCount, warriorsCount, 25, 5, "Olga", 26, 5, "Fatleggy");
+        for (int i = 0; i < harverstersCount; i++)
+        {
+            if(i%2 ==0)
+                colony1.Harvesters.Add(new AntHarvester(10, 3, "LaoGanMa"));
+            else
+                colony1.Harvesters.Add(new AntHarvester(30, 15, "Gigachad"));
+        }
+        for (int i = 0; i < harverstersCount; i++)
+        {
+            colony1.Harvesters[i].info();
+        }
+    }
+
+
 }
+

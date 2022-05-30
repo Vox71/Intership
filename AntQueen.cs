@@ -7,7 +7,7 @@ public class AntQueen : Ant
         Console.WriteLine("did somethin...");
     }
 
-    public AntQueen(int health, int damage, int defence, string antname) : base(health, damage, defence, antname)
+    public AntQueen(int health, int defence, string antname) : base(health, defence, antname)
     {
     }
 }

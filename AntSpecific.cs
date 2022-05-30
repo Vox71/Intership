@@ -2,7 +2,7 @@
 
 public class AntSpecific : Ant
 {
-    public AntSpecific(int health, int damage, int defence, string antname) : base(health, damage, defence, antname)
+    public AntSpecific(int health, int defence, string antname) : base(health, defence, antname)
     {
     }
 }

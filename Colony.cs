@@ -6,13 +6,17 @@ public class Colony
     public List<AntHarvester> Harvesters;
     public AntQueen Queen;
     public AntSpecific Specific;
-   /* public Colony(Warrior)
+    public Colony(int HarversterCount, int WarriorsCount, int QHealth, int QDefence, string QAntname, int SHealth, int SDefence, string SAntname)
     {
-        this.Warriors = Warrior;
+        Harvesters = new List<AntHarvester>(HarversterCount);
+        Warriors = new List<AntWarrior>(WarriorsCount);
+        Queen = new AntQueen(QHealth, QDefence, QAntname);
+        Specific = new AntSpecific(SHealth, SDefence, SAntname);
     }
-*/
-    public void info()
-    {
 
+    public void Info()
+    {
+        
     }
+
 }
