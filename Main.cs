@@ -9,7 +9,7 @@ class Program
 
     static void Init(int harverstersCount, int warriorsCount)
     {
-        Colony colony1 = new Colony(harverstersCount, warriorsCount, 25, 5, "Olga", 26, 5, "Fatleggy");
+        Colony colony1 = new Colony(harverstersCount, warriorsCount, 25, 5, "Olga", 27, 26, 5, "Fatleggy");
         for (int i = 0; i < harverstersCount; i++)
         {
             if(i%2 ==0)
