@@ -2,12 +2,15 @@
 
 public class Colony
 {
-    public List<Ant> units;
-    public Colony(int countUnits, int totalDefense)
+    public List<AntWarrior> Warriors;
+    public List<AntHarvester> Harvesters;
+    public AntQueen Queen;
+    public AntSpecific Specific;
+   /* public Colony(Warrior)
     {
-        units = new List<Ant>(countUnits);
+        this.Warriors = Warrior;
     }
-
+*/
     public void info()
     {
 

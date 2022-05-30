@@ -2,7 +2,7 @@
 
 public class AntHarvester : Ant
 {
-    public AntHarvester(int health, int damage, int defence) : base(health, damage, defence)
+    public AntHarvester(int health, int damage, int defence, string antname) : base(health, damage, defence, antname)
     {
     }
 }
