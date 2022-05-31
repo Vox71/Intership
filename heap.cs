@@ -5,13 +5,17 @@ public class heap
     public int Stick;
     public int Leaf;
     public int Dew;
-    public int Heapnumber;
+    public int Pebble;
 
-    public heap(int stick, int leaf, int dew, int heapnumber)
+
+    public heap(int stick, int pebble, int leaf, int dew)
     {
         Stick = stick;
+        Pebble = pebble;
         Leaf = leaf;
         Dew = dew;
-        Heapnumber = heapnumber;
     }
+    
+    
 }
+

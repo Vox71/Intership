@@ -4,10 +4,11 @@ class Program
 {
     static void Main()
     {
-        Init(3, 3);
+        NewColony(3, 3);
+        GenerateHeaps();
     }
 
-    static void Init(int harverstersCount, int warriorsCount)
+    static void NewColony(int harverstersCount, int warriorsCount)
     {
         Colony colony1 = new Colony(harverstersCount, warriorsCount, 25, 5, "Olga", 27, 26, 5, "Fatleggy");
         for (int i = 0; i < harverstersCount; i++)
@@ -32,7 +33,16 @@ class Program
         {
             colony1.Warriors[i].info();
         }
-        colony1.Gotogang();
+    }
+
+    static void GenerateHeaps()
+    {
+        List<heap> heaps = new List<heap>();
+        heaps.Add(new heap(14, 19, 0, 0));
+        heaps.Add(new heap(49, 0, 23, 0));
+        heaps.Add(new heap(36, 0, 26, 15));
+        heaps.Add(new heap(14, 0, 10, 0));
+        heaps.Add(new heap(14, 0, 0, 40));
     }
 
 

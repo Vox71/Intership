@@ -6,6 +6,7 @@ public class Ant
     public int defence;
     public string antname;
     public int place = 0;
+    public List<String> Attributes;
 
     public Ant(int health, int defence, string antname)
     {
@@ -24,5 +25,9 @@ public class Ant
         Random rnd = new Random();
         place = rnd.Next(1, 5);
         Console.WriteLine($"{antname} отправляется на кучу {place}");
+    }
+    public void gotocolony()
+    {
+        
     }
 }
