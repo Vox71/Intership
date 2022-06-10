@@ -2,13 +2,25 @@
 
 public class AntWarrior : Ant
 {
-    public int damage;
-    public AntWarrior(int health, int defence, string antname, int damage) : base(health, defence, antname)
+    public int Damage;
+    public string Attributes;
+    public AntWarrior(int health, int defence, string antname, int damage, string attributes) : base(health, defence, antname)
     {
+        Damage = damage;
+        Attributes = attributes;
+
     }
 
-    public void Attack()
+    public void Attack(List<Heap> heaps, ant)
     {
-        
+        for
+    }
+    public virtual void Info()
+    {
+        Console.WriteLine($"Здоровье = {Health}, Защита = {Defence}, Тип = {Antname}, Урон = {Damage}");
+        if (Place == 0)
+            Console.WriteLine("Находится в колонии");
+        else
+            Console.WriteLine($"Находится в куче {Place}");
     }
 }

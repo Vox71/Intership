@@ -2,32 +2,38 @@
 
 public class Ant
 {
-    public int health;
-    public int defence;
-    public string antname;
-    public int place = 0;
-    public List<String> Attributes;
+    public int Health;
+    public int Defence;
+    public string Antname;
+    public int Place = 0;
+
 
     public Ant(int health, int defence, string antname)
+
     {
-        this.health = health;
-        this.defence = defence;
-        this.antname = antname;
+        Health = health; 
+        Defence = defence;
+        Antname = antname;
     }
 
-    public void info()
+    public void Info()
     {
-        Console.WriteLine($"Здоровье = {health}, Защита = {defence}, Имя = {antname}");
+        Console.WriteLine($"Здоровье = {Health}, Защита = {Defence}, Тип = {Antname}");
+        if (Place == 0)
+            Console.WriteLine("Находится в колонии");
+        else
+            Console.WriteLine($"Находится в куче {Place}");
     }
 
-    public void gotoheap()
+    public void Gotoheap()
     {
         Random rnd = new Random();
-        place = rnd.Next(1, 5);
-        Console.WriteLine($"{antname} отправляется на кучу {place}");
+        Place = rnd.Next(1, 5);
+        Console.WriteLine($"{Antname} отправляется на кучу {Place}");
     }
-    public void gotocolony()
+    public void Gotocolony()
     {
-        
+        Place = 0;
     }
+    
 }
