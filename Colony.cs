@@ -7,42 +7,18 @@ public class Colony
     public AntQueen Queen;
     public AntSpecific Specific;
     public string ColonyName;
-    public int Stash;
-    public Colony(int harvesterCount, int warriorsCount, int qHealth, int qDefence, string qAntname, int qDamage, int sHealth, int sDefence, string sAntname, int sDamage, string sAttributes, string colonyName)
+    public Colony(int harvesterCount, int warriorsCount, int qHealth, int qDefence, string queenName, int qDamage, int sHealth, int sDefence, string sAntname, int sDamage, string sAttributes, string colonyName)
     {
         Harvesters = new List<AntHarvester>(harvesterCount);
         Warriors = new List<AntWarrior>(warriorsCount);
-        Queen = new AntQueen(qHealth, qDefence, qAntname, qDamage);
-        Specific = new AntSpecific(sHealth, sDefence, sAntname, sDamage, sAttributes);
+        Queen = new AntQueen(qHealth, qDefence, queenName, qDamage, colonyName);
+        Specific = new AntSpecific(sHealth, sDefence, sAntname, sDamage, sAttributes, colonyName, queenName);
+        ColonyName = colonyName;
     }
 
     public void Info()
     {
-        
-    }
-
-    public void Gotogang()
-    {
-        for (int i = 0; i < Warriors.Count; i++)
-            Warriors[i].Gotoheap();
-        for (int i = 0; i < Harvesters.Count; i++)
-            Harvesters[i].Gotoheap();
-        Specific.Gotoheap();
-    }
-    public void ColonyRaid(List<Heap> heaps)
-    {
-        for (int i = 0; i < Harvesters.Count; i++)
-            Harvesters[i].Gotoheap();
-        for (int i = 0; i < Warriors.Count; i++)
-            Warriors[i].Gotoheap();
-        for (int i = 0; i < Harvesters.Count; i++)
-            Harvesters[i].AttrCheck(heaps);
-        for (int i = 0; i < Warriors.Count; i++)
-            Warriors[i].Gotocolony();
-        for (int i = 0; i < Harvesters.Count; i++)
-        {
-            Stash += Harvesters[i].Stashloot();
-            Harvesters[i].Gotocolony();
-        }
+        Console.WriteLine($"Колонией {this.ColonyName} руководит королева по имени {Queen.Antname}");
+        Console.WriteLine($"Колония содержит {Warriors.Count} воинов, {Harvesters.Count} рабочих, особое насекомое {Specific.Antname}");
     }
 }

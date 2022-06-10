@@ -5,17 +5,18 @@ public class AntSpecific : Ant
     public string Attributes;
     public int Damage;
     public int Backpack;
+    public string QueenName;
 
-    public AntSpecific(int health, int defence, string antname, int damage, string attributes) : base(health, defence, antname)
+    public AntSpecific(int health, int defence, string antname, int damage, string attributes, string colonyName, string queenName) : base(health, defence, antname, colonyName)
     {
         Damage = damage;
         Attributes = attributes;
+        QueenName = queenName;
 
     }
-    public virtual int Stashloot()
+
+    public void QueenInfo()
     {
-        int loot = Backpack;
-        Backpack = 0;
-        return loot;
+        Console.WriteLine($"Я служу королеве по имени {QueenName}");
     }
 }

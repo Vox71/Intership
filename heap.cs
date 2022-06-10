@@ -6,7 +6,6 @@ public class Heap
     public int Leaf;
     public int Dew;
     public int Pebble;
-    public List<Unit> Units;
 
 
     public Heap(int stick, int pebble, int leaf, int dew)
@@ -16,13 +15,6 @@ public class Heap
         Leaf = leaf;
         Dew = dew;
     }
-}
-
-public class Unit
-{
-    public string name;
-    public string
-
 }
 
 
